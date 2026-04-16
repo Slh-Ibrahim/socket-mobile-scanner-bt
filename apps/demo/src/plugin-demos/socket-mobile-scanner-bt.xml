@@ -1,0 +1,35 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="navigatingTo"
+      unloaded="onUnload"
+      class="page">
+  
+  <ActionBar title="Socket Mobile Scanner" class="action-bar"/>
+
+  <ScrollView>
+    <StackLayout class="p-20">
+      <Label text="Socket Mobile Scanner Demo" class="h1 text-center m-b-20"/>
+      
+      <StackLayout class="card m-b-20 p-20">
+        <Label text="📡 Status" class="h2 m-b-10"/>
+        <Label text="{{ deviceStatus }}" textWrap="true" class="text-center"/>
+        
+        <Label text="{{ deviceName }}" class="h3 text-center m-t-10" visibility="{{ deviceName ? 'visible' : 'collapsed' }}"/>
+        
+        <Label text="🔋 {{ batteryLevel }}" class="text-center m-t-10" visibility="{{ batteryLevel ? 'visible' : 'collapsed' }}"/>
+      </StackLayout>
+      
+      <StackLayout class="card m-b-20 p-20">
+        <Label text="📱 Soft Scan Controls" class="h2 m-b-10"/>
+        <Button text="▶️ Start Scan" tap="{{ onSoftScanStart }}" class="btn btn-primary m-b-10"/>
+        <Button text="⏹ Stop Scan" tap="{{ onSoftScanStop }}" class="btn btn-primary m-b-10"/>
+        <Button text="🔋 Get Battery" tap="{{ onGetBattery }}" class="btn btn-outline m-b-10"/>
+      </StackLayout>
+      
+      <StackLayout class="card p-20">
+        <Label text="📦 Scanned Data" class="h2 m-b-10"/>
+        <Label text="{{ scannedData }}" textWrap="true" class="h3 m-b-10"/>
+        <Label text="{{ 'Symbology: ' + symbology }}" class="text-muted"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</Page>

@@ -44,3 +44,5 @@ packages/**/angular/dist
 
 .nx/cache
 .nx/workspace-data
+
+socketMobile.ts
