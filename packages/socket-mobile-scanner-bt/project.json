@@ -1,0 +1,65 @@
+{
+  "name": "socket-mobile-scanner-bt",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/socket-mobile-scanner-bt",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "outputPath": "dist/packages/socket-mobile-scanner-bt",
+        "tsConfig": "packages/socket-mobile-scanner-bt/tsconfig.json",
+        "packageJson": "packages/socket-mobile-scanner-bt/package.json",
+        "main": "packages/socket-mobile-scanner-bt/index.d.ts",
+        "assets": [
+          "packages/socket-mobile-scanner-bt/*.md",
+          "packages/socket-mobile-scanner-bt/index.d.ts",
+          "LICENSE",
+          {
+            "glob": "**/*",
+            "input": "packages/socket-mobile-scanner-bt/platforms/",
+            "output": "./platforms/"
+          }
+        ],
+        "dependsOn": [
+          {
+            "target": "build.all",
+            "projects": "dependencies"
+          }
+        ]
+      }
+    },
+    "build.all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["node tools/scripts/build-finish.ts socket-mobile-scanner-bt"],
+        "parallel": false
+      },
+      "outputs": ["{workspaceRoot}/dist/packages/socket-mobile-scanner-bt"],
+      "dependsOn": [
+        {
+          "target": "build.all",
+          "projects": "dependencies"
+        },
+        {
+          "target": "build",
+          "projects": "self"
+        }
+      ]
+    },
+    "focus": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["nx g @nativescript/plugin-tools:focus-packages socket-mobile-scanner-bt"],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:eslint",
+      "options": {
+        "lintFilePatterns": ["packages/socket-mobile-scanner-bt/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -38,6 +38,32 @@
         "forDevice": false,
         "prepare": false
       }
+    },
+    "debug-device": {
+      "executor": "@nativescript/nx:debug",
+      "options": {
+        "noHmr": true,
+        "uglify": false,
+        "release": false,
+        "forDevice": true,
+        "prepare": false
+      }
+    },
+    "debug-device-safe": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["pkill -f \"node .*bin/ns debug ios\" || true", "pkill -f \"@nativescript/webpack/dist/bin/index.js build\" || true", "pkill -f \"ios-device-lib\" || true", "npx nx run demo:debug-device ios --device={args.device}"],
+        "parallel": false,
+        "forwardAllArgs": false
+      }
+    },
+    "debug-device-safe-fixed": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["pkill -f \"node .*bin/ns debug ios\" || true", "pkill -f \"@nativescript/webpack/dist/bin/index.js build\" || true", "pkill -f \"ios-device-lib\" || true", "npx nx run demo:debug-device ios --device=00008030-001411D90152202E"],
+        "parallel": false,
+        "forwardAllArgs": false
+      }
     }
   }
 }

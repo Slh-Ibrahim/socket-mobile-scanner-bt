@@ -37,12 +37,19 @@ module.exports = {
       },
     },
     '⚙️': {
-      script: `npx cowsay "@nativescript/* packages will keep your ⚙️ cranking"`,
-      description: '_____________  @nativescript/*  _____________',
+      script: `npx cowsay "@slh-ibrahim/* packages will keep your ⚙️ cranking"`,
+      description: '_____________  @slh-ibrahim/*  _____________',
     },
     // packages
     // build output is always in dist/packages
-    '@nativescript': {
+    '@slh-ibrahim': {
+      // @slh-ibrahim/socket-mobile-scanner-bt
+      'socket-mobile-scanner-bt': {
+        build: {
+          script: 'nx run socket-mobile-scanner-bt:build.all',
+          description: '@slh-ibrahim/socket-mobile-scanner-bt: Build',
+        },
+      },
       'build-all': {
         script: 'nx run-many --target=build.all --all',
         description: 'Build all packages',
@@ -53,6 +60,10 @@ module.exports = {
       description: '_____________  Focus (VS Code supported)  _____________',
     },
     focus: {
+      'socket-mobile-scanner-bt': {
+        script: 'nx run socket-mobile-scanner-bt:focus',
+        description: 'Focus on @slh-ibrahim/socket-mobile-scanner-bt',
+      },
       reset: {
         script: 'nx g @nativescript/plugin-tools:focus-packages',
         description: 'Reset Focus',

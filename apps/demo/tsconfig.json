@@ -5,7 +5,9 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
-      "@demo/shared": ["../../tools/demo/index.ts"]
+      "@demo/shared": ["../../tools/demo/index.ts"],
+      "@slh-ibrahim/*": ["../../packages/*"],
+      "@slh-ibrahim/socket-mobile-scanner-bt": ["../../packages/socket-mobile-scanner-bt/index.d.ts"]
     }
   }
 }

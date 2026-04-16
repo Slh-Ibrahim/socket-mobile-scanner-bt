@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/apps/demo": false,
+    "**/packages/socket-mobile-scanner-bt": false
+  },
+  "search.exclude": {
+    "**/apps/demo": false,
+    "**/packages/socket-mobile-scanner-bt": false
+  }
+}

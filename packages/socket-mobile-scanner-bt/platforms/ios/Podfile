@@ -1,0 +1,12 @@
+Pod::Spec.new do |s|
+  s.name         = "SocketMobileScannerBt"
+  s.version      = "1.0.0"
+  s.summary      = "NativeScript Socket Mobile Scanner Plugin"
+  s.license      = "MIT"
+  s.author       = { "Slh-Ibrahim" => "slhabualhijaa@gmail.com" }
+  s.homepage     = "https://github.com/Slh-Ibrahim/socket-mobile-scanner-bt"
+  s.platform     = :ios, "13.0"
+  s.source       = { :git => "https://github.com/Slh-Ibrahim/socket-mobile-scanner-bt.git" }
+  s.source_files = "**/*.{h,m,swift}"
+  s.dependency 'CaptureSDK'
+end

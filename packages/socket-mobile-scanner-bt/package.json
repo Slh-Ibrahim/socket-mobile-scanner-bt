@@ -1,0 +1,53 @@
+{
+  "name": "@slh-ibrahim/socket-mobile-scanner-bt",
+  "version": "1.0.0",
+  "description": "NativeScript plugin for Socket Mobile Bluetooth barcode scanners (iOS & Android)",
+  "main": "index",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "ios": "8.0.0",
+      "android": "8.0.0"
+    }
+  },
+  "scripts": {
+    "build": "tsc -skipLibCheck"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "index.ios.js",
+    "index.android.js",
+    "common.js",
+    "common.d.ts",
+    "platforms/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "NativeScript",
+    "nativescript-plugin",
+    "Socket Mobile",
+    "barcode scanner",
+    "bluetooth",
+    "iOS",
+    "Android",
+    "CaptureSDK"
+  ],
+  "author": "Slh-Ibrahim",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Slh-Ibrahim/socket-mobile-scanner-bt"
+  },
+  "bugs": {
+    "url": "https://github.com/Slh-Ibrahim/socket-mobile-scanner-bt/issues"
+  },
+  "homepage": "https://github.com/Slh-Ibrahim/socket-mobile-scanner-bt#readme",
+  "peerDependencies": {
+    "@nativescript/core": ">=8.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

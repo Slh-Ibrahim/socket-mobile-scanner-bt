@@ -1,0 +1,17 @@
+{
+  "name": "@slh-ibrahim",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Slh-Ibrahim/socket-mobile-scanner-bt.git"
+  },
+  "keywords": ["NativeScript", "JavaScript", "TypeScript", "iOS", "Android"],
+  "author": {
+    "name": "socket-mobile-scanner-bt",
+    "email": "slhabualhijaa@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Slh-Ibrahim/socket-mobile-scanner-bt/issues"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/Slh-Ibrahim/socket-mobile-scanner-bt"
+}
